@@ -1,0 +1,20 @@
+<template>
+
+    <lightning-card title="list Products" icon-name="custom:custom36">
+       
+        <div style="height:500px">
+            <template if:true={accList}>
+                <lightning-datatable data={accList} columns={columns} key-field="Id" enable-infinite-loading
+                    onloadmore={loadMoreData} 
+                    onrowaction={handleRowAction}
+                    hide-checkbox-column="true">
+                </lightning-datatable>
+            </template>
+            <template if:true={error}>
+                {error}
+            </template>
+        </div>
+
+    </lightning-card>
+
+</template>

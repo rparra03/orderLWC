@@ -1,0 +1,19 @@
+<template>
+
+
+
+    <lightning-card title="Order Producst" icon-name="custom:custom36">
+        <lightning-button label="external system " title="external system " onclick={handleSync} class="slds-m-left_x-small"></lightning-button>
+
+        <template if:true={accList}>
+            <lightning-datatable data={accList} columns={columns} key-field="Id" hide-checkbox-column="true">
+            </lightning-datatable>
+        </template>
+        <template if:true={error}>
+            {error}
+        </template>
+
+       
+    </lightning-card>  
+    
+</template>
